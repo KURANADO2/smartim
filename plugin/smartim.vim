@@ -76,6 +76,7 @@ function! Smartim_SelectDefault()
     call Smartim_debug_print('<<< Smartim_SelectDefault returned ' . v:shell_error)
   endif
 
+  set timeoutlen=1000
 endfunction
 
 function! Smartim_SelectSaved()
@@ -97,6 +98,8 @@ function! Smartim_SelectSaved()
   else
     call Smartim_debug_print('<<< Smartim_SelectSaved returned')
   endif
+
+  set timeoutlen=0
 endfunction
 
 augroup smartim
